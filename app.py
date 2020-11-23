@@ -1,7 +1,7 @@
 import sqlite3
 from flask import Flask, render_template, request, url_for, flash, redirect
 from werkzeug.exceptions import abort
-
+from flask import Markup
 
 def get_db_connection():
     conn = sqlite3.connect('database.db')
@@ -46,6 +46,7 @@ def create():
         if not title:
             flash('Title is required!')
         else:
+            content = '<br>'.join(content.split('\n'))
             conn = get_db_connection()
             conn.execute('INSERT INTO posts (title, content) VALUES (?, ?)',
                          (title, content))
