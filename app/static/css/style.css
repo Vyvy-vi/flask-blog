@@ -1,6 +1,11 @@
+body {
+    background: blue;
+    color: yellow;
+}
+
 h1 {
     border: 2px #eee solid;
-    color: brown;
+    color: Purple;
     text-align: center;
     padding: 10px;
 }

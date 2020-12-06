@@ -12,7 +12,6 @@ def get_db_connection():
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'yrtfbi3h495utih'
 
-
 @app.route('/')
 def index():
     conn = get_db_connection()
